@@ -47,14 +47,14 @@ class CupcakeScreenNavigationTest {
     }
 
     @Test
-    fun cupcakeNavHost_clickTheUpButtonOnFlavourScreen_navigateToStartScreen(){ //ok
+    fun cupcakeNavHost_clickTheUpButtonOnFlavourScreen_navigateToStartScreen(){
         navigateToFlavourScreen()
         performNavigateUp()
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
     }
 
     @Test
-    fun cupcakeNavHost_clickCancelButtonOnFlavourScreen_navigateToStartScreen(){ //ok
+    fun cupcakeNavHost_clickCancelButtonOnFlavourScreen_navigateToStartScreen(){
         navigateToFlavourScreen()
         composeTestRule.onNodeWithStringId(R.string.cancel).performClick()
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
@@ -67,14 +67,14 @@ class CupcakeScreenNavigationTest {
     }
 
     @Test
-    fun cupcakeNavHost_clickUpButtonOnPickupScreen_navigateToFlavourScreen(){ //ok
+    fun cupcakeNavHost_clickUpButtonOnPickupScreen_navigateToFlavourScreen(){
         navigateToPickupScreen()
         performNavigateUp()
         navController.assertCurrentRouteName(CupcakeScreen.Flavour.name)
     }
 
     @Test
-    fun cupcakeNavHost_clickCancelButtonOnPickupScreen_navigateToStartScreen(){ //ok
+    fun cupcakeNavHost_clickCancelButtonOnPickupScreen_navigateToStartScreen(){
         navigateToPickupScreen()
         composeTestRule.onNodeWithStringId(R.string.cancel).performClick()
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
@@ -87,7 +87,7 @@ class CupcakeScreenNavigationTest {
     }
 
     @Test
-    fun cupcakeNavHost_clickCancelButtonOnSummaryScreen_navigateToStartScreen(){ //ok
+    fun cupcakeNavHost_clickCancelButtonOnSummaryScreen_navigateToStartScreen(){
         navigateToSummaryScreen()
         composeTestRule.onNodeWithStringId(R.string.cancel).performClick()
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
